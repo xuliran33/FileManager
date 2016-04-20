@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A2301" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lQG-FG-Ww9">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="WzF-HL-Vei">
+            <objects>
+                <tabBarController id="lQG-FG-Ww9" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Mo4-nt-Tac">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9AP-rf-dPZ" kind="relationship" relationship="viewControllers" id="0kW-6N-L7S"/>
+                        <segue destination="zXU-Va-noD" kind="relationship" relationship="viewControllers" id="uTW-Df-SWa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i2C-oo-du5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14" y="427"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="63Z-Rm-j1Q">
+            <objects>
+                <viewController id="9AP-rf-dPZ" customClass="FirstViewController" customModule="FileManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S2T-tM-p9T"/>
+                        <viewControllerLayoutGuide type="bottom" id="XdX-tC-EwH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="emc-ey-f8H">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Qo-xG-Tyh">
+                                <rect key="frame" x="245" y="82" width="109" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Documents路径">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getDocumentsPath:" destination="9AP-rf-dPZ" eventType="touchUpInside" id="GBU-Id-wrK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEl-Dp-hV5">
+                                <rect key="frame" x="267" y="120" width="66" height="30"/>
+                                <animations/>
+                                <state key="normal" title="temp路径">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getTempPath:" destination="9AP-rf-dPZ" eventType="touchUpInside" id="IP6-sY-zac"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2s-Wu-QjY">
+                                <rect key="frame" x="262" y="158" width="75" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Cache路径">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getCachesPath:" destination="9AP-rf-dPZ" eventType="touchUpInside" id="abu-Ze-dkW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toR-k9-mMY">
+                                <rect key="frame" x="269" y="196" width="60" height="30"/>
+                                <animations/>
+                                <state key="normal" title="遍历目录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enumerating:" destination="9AP-rf-dPZ" eventType="touchUpInside" id="kRP-au-lCK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="toR-k9-mMY" firstAttribute="top" secondItem="y2s-Wu-QjY" secondAttribute="bottom" constant="8" id="49f-9f-arF"/>
+                            <constraint firstAttribute="centerX" secondItem="6Qo-xG-Tyh" secondAttribute="centerX" id="4fq-mH-VYP"/>
+                            <constraint firstItem="y2s-Wu-QjY" firstAttribute="top" secondItem="gEl-Dp-hV5" secondAttribute="bottom" constant="8" id="Nre-bI-5n4"/>
+                            <constraint firstItem="gEl-Dp-hV5" firstAttribute="top" secondItem="6Qo-xG-Tyh" secondAttribute="bottom" constant="8" id="Prh-FJ-zNF"/>
+                            <constraint firstItem="6Qo-xG-Tyh" firstAttribute="centerX" secondItem="gEl-Dp-hV5" secondAttribute="centerX" id="Ryk-0e-m7v"/>
+                            <constraint firstItem="y2s-Wu-QjY" firstAttribute="centerX" secondItem="toR-k9-mMY" secondAttribute="centerX" id="dye-Ra-OOx"/>
+                            <constraint firstItem="y2s-Wu-QjY" firstAttribute="centerX" secondItem="gEl-Dp-hV5" secondAttribute="centerX" id="uL2-I6-eKT"/>
+                            <constraint firstItem="6Qo-xG-Tyh" firstAttribute="top" secondItem="S2T-tM-p9T" secondAttribute="bottom" constant="62" id="www-nb-6b9"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Z98-lT-FfP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dui-WJ-Nvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="316"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="dRR-02-zUm">
+            <objects>
+                <viewController id="zXU-Va-noD" customClass="SecondViewController" customModule="FileManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="clZ-f3-ZJ0"/>
+                        <viewControllerLayoutGuide type="bottom" id="CJN-Hf-tuk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qgQ-tm-wOw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrD-6e-Yop">
+                                <rect key="frame" x="16" y="42" width="568" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4U5-Tz-pPz">
+                                <rect key="frame" x="285" y="96" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="保存">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveToDisk:" destination="zXU-Va-noD" eventType="touchUpInside" id="1ih-kl-zR7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAN-5O-Jtk">
+                                <rect key="frame" x="255" y="134" width="90" height="30"/>
+                                <animations/>
+                                <state key="normal" title="显示文件内容">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="displayContent:" destination="zXU-Va-noD" eventType="touchUpInside" id="7Op-C2-7T4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezK-k8-XjK">
+                                <rect key="frame" x="16" y="172" width="568" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6a-iC-xwv">
+                                <rect key="frame" x="247" y="201" width="105" height="30"/>
+                                <animations/>
+                                <state key="normal" title="数组写入到文件">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveArrayToDisk:" destination="zXU-Va-noD" eventType="touchUpInside" id="GFZ-WW-9kC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCQ-qD-I7d">
+                                <rect key="frame" x="241" y="239" width="117" height="30"/>
+                                <animations/>
+                                <state key="normal" title="在tmp中创建目录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="creatDirectory:" destination="zXU-Va-noD" eventType="touchUpInside" id="voZ-9i-gea"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4U5-Tz-pPz" firstAttribute="top" secondItem="hrD-6e-Yop" secondAttribute="bottom" constant="24" id="0KZ-V6-2FY"/>
+                            <constraint firstAttribute="trailing" secondItem="hrD-6e-Yop" secondAttribute="trailing" constant="16" id="1Ye-hx-5YM"/>
+                            <constraint firstItem="y6a-iC-xwv" firstAttribute="top" secondItem="ezK-k8-XjK" secondAttribute="bottom" constant="8" id="8UG-0K-g2x"/>
+                            <constraint firstItem="ZAN-5O-Jtk" firstAttribute="top" secondItem="4U5-Tz-pPz" secondAttribute="bottom" constant="8" id="8og-iV-uFc"/>
+                            <constraint firstItem="ZAN-5O-Jtk" firstAttribute="centerX" secondItem="ezK-k8-XjK" secondAttribute="centerX" id="CHz-tp-3uh"/>
+                            <constraint firstItem="ezK-k8-XjK" firstAttribute="top" secondItem="ZAN-5O-Jtk" secondAttribute="bottom" constant="8" id="HM6-hr-hbN"/>
+                            <constraint firstAttribute="centerX" secondItem="hrD-6e-Yop" secondAttribute="centerX" constant="-0.5" id="NAU-FM-Wjd"/>
+                            <constraint firstItem="y6a-iC-xwv" firstAttribute="centerX" secondItem="kCQ-qD-I7d" secondAttribute="centerX" id="NDT-fh-Z0D"/>
+                            <constraint firstItem="hrD-6e-Yop" firstAttribute="top" secondItem="clZ-f3-ZJ0" secondAttribute="bottom" constant="22" id="PXv-sw-rqC"/>
+                            <constraint firstItem="kCQ-qD-I7d" firstAttribute="top" secondItem="y6a-iC-xwv" secondAttribute="bottom" constant="8" id="aDw-4Y-b6p"/>
+                            <constraint firstAttribute="trailing" secondItem="ezK-k8-XjK" secondAttribute="trailing" constant="16" id="asn-Sa-dn5"/>
+                            <constraint firstItem="4U5-Tz-pPz" firstAttribute="centerX" secondItem="hrD-6e-Yop" secondAttribute="centerX" id="g0I-x5-WWD"/>
+                            <constraint firstItem="ZAN-5O-Jtk" firstAttribute="centerX" secondItem="4U5-Tz-pPz" secondAttribute="centerX" id="rBP-yp-SXZ"/>
+                            <constraint firstItem="ezK-k8-XjK" firstAttribute="leading" secondItem="qgQ-tm-wOw" secondAttribute="leading" constant="16" id="v4f-zl-xub"/>
+                            <constraint firstItem="hrD-6e-Yop" firstAttribute="leading" secondItem="qgQ-tm-wOw" secondAttribute="leading" constant="16" id="x7A-Pl-U7F"/>
+                            <constraint firstItem="y6a-iC-xwv" firstAttribute="centerX" secondItem="ZAN-5O-Jtk" secondAttribute="centerX" id="xKF-74-wbr"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="fZc-2O-A6g"/>
+                    <connections>
+                        <outlet property="content" destination="ezK-k8-XjK" id="YCe-a1-wh0"/>
+                        <outlet property="textField" destination="hrD-6e-Yop" id="RmS-OU-tdq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7u1-eU-U47" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753" y="971"/>
+        </scene>
+    </scenes>
+</document>
