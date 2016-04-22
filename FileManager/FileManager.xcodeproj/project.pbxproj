@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D44B4E4D1CC9F47E00E0C3D7 /* ThiedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44B4E4C1CC9F47E00E0C3D7 /* ThiedViewController.swift */; };
 		D4EA88361CC71BFC00A38B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EA88351CC71BFC00A38B41 /* AppDelegate.swift */; };
 		D4EA883B1CC71BFC00A38B41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4EA88391CC71BFC00A38B41 /* Main.storyboard */; };
 		D4EA883D1CC71BFC00A38B41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EA883C1CC71BFC00A38B41 /* Images.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D44B4E4C1CC9F47E00E0C3D7 /* ThiedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThiedViewController.swift; sourceTree = "<group>"; };
 		D4EA88301CC71BFC00A38B41 /* FileManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EA88341CC71BFC00A38B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4EA88351CC71BFC00A38B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				D4EA88351CC71BFC00A38B41 /* AppDelegate.swift */,
 				D4EA88571CC71EAF00A38B41 /* FirstViewController.swift */,
 				D4EA885B1CC74D6200A38B41 /* SecondViewController.swift */,
+				D44B4E4C1CC9F47E00E0C3D7 /* ThiedViewController.swift */,
 				D4EA88391CC71BFC00A38B41 /* Main.storyboard */,
 				D4EA883C1CC71BFC00A38B41 /* Images.xcassets */,
 				D4EA883E1CC71BFC00A38B41 /* LaunchScreen.xib */,
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4EA885C1CC74D6200A38B41 /* SecondViewController.swift in Sources */,
+				D44B4E4D1CC9F47E00E0C3D7 /* ThiedViewController.swift in Sources */,
 				D4EA88361CC71BFC00A38B41 /* AppDelegate.swift in Sources */,
 				D4EA88581CC71EAF00A38B41 /* FirstViewController.swift in Sources */,
 			);
@@ -413,6 +417,7 @@
 				D4EA88511CC71BFC00A38B41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D4EA88521CC71BFC00A38B41 /* Build configuration list for PBXNativeTarget "FileManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				D4EA88541CC71BFC00A38B41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

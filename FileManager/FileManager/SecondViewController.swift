@@ -64,6 +64,30 @@ class SecondViewController: UIViewController {
         }
     }
     
+    // 删除temp文件中的目录
+    
+    @IBAction func deleteDirectory(sender: UIButton) {
+        let folder = NSTemporaryDirectory()
+        var error: NSError?
+        let fileManager = NSFileManager()
+        let contents = fileManager.contentsOfDirectoryAtPath(folder, error: &error) as! [String]
+        println(contents)
+        if let theError = error{
+            println("An error occurred = \(theError)")
+        }else{
+            for fileName in contents{
+                let filePath = folder.stringByAppendingPathComponent(fileName)
+                if fileManager.removeItemAtPath(filePath, error: nil){
+                
+                    println("成功删除: \(filePath)")
+                }else{
+                    println("删除失败: \(filePath)")
+                }
+            }
+        }
+        
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

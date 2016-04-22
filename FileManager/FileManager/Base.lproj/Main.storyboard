@@ -18,6 +18,7 @@
                     <connections>
                         <segue destination="9AP-rf-dPZ" kind="relationship" relationship="viewControllers" id="0kW-6N-L7S"/>
                         <segue destination="zXU-Va-noD" kind="relationship" relationship="viewControllers" id="uTW-Df-SWa"/>
+                        <segue destination="mX0-3f-USP" kind="relationship" relationship="viewControllers" id="oGA-Gd-hBx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2C-oo-du5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -138,7 +139,7 @@
                                 <rect key="frame" x="16" y="172" width="568" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6a-iC-xwv">
@@ -161,6 +162,16 @@
                                     <action selector="creatDirectory:" destination="zXU-Va-noD" eventType="touchUpInside" id="voZ-9i-gea"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQe-GT-eKs">
+                                <rect key="frame" x="236" y="470" width="126" height="30"/>
+                                <animations/>
+                                <state key="normal" title="删除temp中的目录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteDirectory:" destination="zXU-Va-noD" eventType="touchUpInside" id="tEg-sf-G55"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -169,6 +180,7 @@
                             <constraint firstAttribute="trailing" secondItem="hrD-6e-Yop" secondAttribute="trailing" constant="16" id="1Ye-hx-5YM"/>
                             <constraint firstItem="y6a-iC-xwv" firstAttribute="top" secondItem="ezK-k8-XjK" secondAttribute="bottom" constant="8" id="8UG-0K-g2x"/>
                             <constraint firstItem="ZAN-5O-Jtk" firstAttribute="top" secondItem="4U5-Tz-pPz" secondAttribute="bottom" constant="8" id="8og-iV-uFc"/>
+                            <constraint firstItem="CJN-Hf-tuk" firstAttribute="top" secondItem="dQe-GT-eKs" secondAttribute="bottom" constant="51" id="CB2-XZ-Jrs"/>
                             <constraint firstItem="ZAN-5O-Jtk" firstAttribute="centerX" secondItem="ezK-k8-XjK" secondAttribute="centerX" id="CHz-tp-3uh"/>
                             <constraint firstItem="ezK-k8-XjK" firstAttribute="top" secondItem="ZAN-5O-Jtk" secondAttribute="bottom" constant="8" id="HM6-hr-hbN"/>
                             <constraint firstAttribute="centerX" secondItem="hrD-6e-Yop" secondAttribute="centerX" constant="-0.5" id="NAU-FM-Wjd"/>
@@ -176,6 +188,7 @@
                             <constraint firstItem="hrD-6e-Yop" firstAttribute="top" secondItem="clZ-f3-ZJ0" secondAttribute="bottom" constant="22" id="PXv-sw-rqC"/>
                             <constraint firstItem="kCQ-qD-I7d" firstAttribute="top" secondItem="y6a-iC-xwv" secondAttribute="bottom" constant="8" id="aDw-4Y-b6p"/>
                             <constraint firstAttribute="trailing" secondItem="ezK-k8-XjK" secondAttribute="trailing" constant="16" id="asn-Sa-dn5"/>
+                            <constraint firstAttribute="centerX" secondItem="dQe-GT-eKs" secondAttribute="centerX" constant="1" id="fpG-um-2Xj"/>
                             <constraint firstItem="4U5-Tz-pPz" firstAttribute="centerX" secondItem="hrD-6e-Yop" secondAttribute="centerX" id="g0I-x5-WWD"/>
                             <constraint firstItem="ZAN-5O-Jtk" firstAttribute="centerX" secondItem="4U5-Tz-pPz" secondAttribute="centerX" id="rBP-yp-SXZ"/>
                             <constraint firstItem="ezK-k8-XjK" firstAttribute="leading" secondItem="qgQ-tm-wOw" secondAttribute="leading" constant="16" id="v4f-zl-xub"/>
@@ -192,6 +205,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7u1-eU-U47" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="753" y="971"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Oc7-kn-Zvg">
+            <objects>
+                <viewController id="mX0-3f-USP" customClass="ThiedViewController" customModule="FileManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J7m-AX-yBv"/>
+                        <viewControllerLayoutGuide type="bottom" id="HHk-6G-2aT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS3-tB-ALz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEt-wc-IPW">
+                                <rect key="frame" x="254" y="98" width="91" height="30"/>
+                                <animations/>
+                                <state key="normal" title="遍历.app目录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enumeratingApp:" destination="mX0-3f-USP" eventType="touchUpInside" id="dbz-Q4-I1Z"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eu9-Aq-lth">
+                                <rect key="frame" x="16" y="188" width="568" height="95"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="JmH-jO-WZZ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="R1A-1A-KrV"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="R1A-1A-KrV"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eu9-Aq-lth" firstAttribute="top" secondItem="AEt-wc-IPW" secondAttribute="bottom" constant="44" id="4bN-3l-joG"/>
+                            <constraint firstAttribute="trailing" secondItem="eu9-Aq-lth" secondAttribute="trailing" constant="16" id="6hR-9r-l9z"/>
+                            <constraint firstItem="AEt-wc-IPW" firstAttribute="width" secondItem="QS3-tB-ALz" secondAttribute="width" id="De6-27-Wt2"/>
+                            <constraint firstItem="eu9-Aq-lth" firstAttribute="leading" secondItem="QS3-tB-ALz" secondAttribute="leading" constant="16" id="eJ9-Q3-INQ"/>
+                            <constraint firstAttribute="centerX" secondItem="AEt-wc-IPW" secondAttribute="centerX" id="eMH-5L-htr"/>
+                            <constraint firstItem="AEt-wc-IPW" firstAttribute="top" secondItem="J7m-AX-yBv" secondAttribute="bottom" constant="78" id="swN-Ac-CbO"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="De6-27-Wt2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="CrW-kg-Sqf"/>
+                    <connections>
+                        <outlet property="content" destination="eu9-Aq-lth" id="Ml8-nq-1Zb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nia-P8-jZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749" y="1636"/>
         </scene>
     </scenes>
 </document>
